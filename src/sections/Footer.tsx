@@ -28,7 +28,6 @@ export const Footer = () => {
             <h4 className="text-white font-bold mb-4">Product</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Mobile App</a></li>
             </ul>
           </div>
@@ -36,7 +35,7 @@ export const Footer = () => {
             <h4 className="text-white font-bold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Help</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Community</a></li>
             </ul>
           </div>

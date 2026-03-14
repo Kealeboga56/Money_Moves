@@ -219,15 +219,6 @@ export const VideoSection = ({ onStart }: { onStart: () => void }) => {
             <span>Trusted by UCT students</span>
           </motion.div>
 
-          {/* Main Title */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-[1.1] tracking-tight">
-            <AnimatedWord delay={0.2}>Master</AnimatedWord>{' '}
-            <AnimatedWord delay={0.3}>Your</AnimatedWord>{' '}
-            <AnimatedWord delay={0.4}>Money</AnimatedWord>
-            <br />
-            <AnimatedWord delay={0.5} gradient>in Days</AnimatedWord>
-          </h1>
-
           {/* Subtitle */}
           <motion.p 
             className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed"
@@ -235,12 +226,22 @@ export const VideoSection = ({ onStart }: { onStart: () => void }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Transform your financial future with bite-sized gamified lessons, 
-            real-world simulations.
+            Master money before it’s real
           </motion.p>
 
+          {/* Main Title */}
+          <h1 className="text-4xl md:text-6xl lg:text-6xl font-black text-gray-900 mb-6 leading-[1.1] tracking-tight">
+            <AnimatedWord delay={0.2}>Your HOME to learn strategy</AnimatedWord>{' '}
+            <AnimatedWord delay={0.3}>compete</AnimatedWord>{' '}
+            <AnimatedWord delay={0.4}>and master.</AnimatedWord>
+            <br />
+            <AnimatedWord delay={0.5} gradient>MONEY</AnimatedWord>
+          </h1>
+
+
+
           {/* CTA Buttons */}
-          <motion.div 
+          {/*<motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -267,7 +268,9 @@ export const VideoSection = ({ onStart }: { onStart: () => void }) => {
               View Curriculum
             </motion.button>
           </motion.div>
+          */}
 
+          
           {/* Stats Grid */}
           <motion.div 
             className="grid grid-cols-3 gap-4 md:gap-8 max-w-lg mx-auto bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-gray-100"

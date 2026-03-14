@@ -16,7 +16,7 @@ export const CTASection = ({ onStart }: { onStart: () => void }) => {
             Join other people learning learning today. 
           </p>
           <motion.button
-            onClick={() => onStart?.()}
+           onClick={() => window.open("https://ai.studio/apps/6b9defed-4803-4eec-8b08-1e4178d67c08", "_blank")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-12 py-5 rounded-2xl text-gray-900 font-bold text-xl bg-white hover:bg-gray-100 transition-colors shadow-xl"

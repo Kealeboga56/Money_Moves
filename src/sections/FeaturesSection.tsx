@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
 import learningAnimation from '../../src/lottie/learning.json';
 import moneyAnimation from '../../src/lottie/money.json';
-import streakAnimation from '../../src/lottie/streak.json';
 import Man_flying from '../../src/lottie/Businessman_flies.json';
+import fumble from '../../src/lottie/fall.json';
 
 interface Feature {
   id: string;
@@ -41,20 +41,20 @@ const features: Feature[] = [
     headline: 'consistent. rewarding. life-changing.',
     title: 'Build Habits That Stick',
     description:
-      'Daily streaks and reminders keep you on track to financial freedom. Our habit-building system uses behavioral science to help you form lasting money management habits.',
+      'Daily streaks, reminders, and small challenges keep you on track, helping you form lasting money habits while making progress feel fun, visible, and rewarding every step of the way.',
     animation: Man_flying,
     textPosition: 'left',
     accentColor: '#FF9600',
   },
     {
     id: 'build-knowledge',
-    headline: 'consistent. rewarding. life-changing.',
-    title: 'Build streaks That show progression',
+    headline: 'don’t fumble with money.',
+    title: 'Train your financial instincts',
     description:
-      'Feel rewarded for you progress.',
-    animation: streakAnimation,
+      'Learn strategy before real money mistakes happen.',
+    animation: fumble,
     textPosition: 'right',
-    accentColor: '#35bcd4',
+    accentColor: '#35d4bf',
   },
 ];
 
@@ -104,6 +104,8 @@ const FeatureRow = ({ feature, index }: { feature: Feature; index: number }) => 
               {feature.description}
             </p>
 
+
+            {/* commenting out the buttons 
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.95 }}
@@ -113,8 +115,8 @@ const FeatureRow = ({ feature, index }: { feature: Feature; index: number }) => 
                 boxShadow: `0 4px 0 ${feature.accentColor}80, 0 8px 16px ${feature.accentColor}30`,
               }}
             >
-              Learn More
-            </motion.button>
+              Learn More  
+            </motion.button> */}
           </motion.div>
 
           {/* Animation Container */}
