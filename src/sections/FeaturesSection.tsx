@@ -46,6 +46,16 @@ const features: Feature[] = [
     textPosition: 'left',
     accentColor: '#FF9600',
   },
+    {
+    id: 'build-knowledge',
+    headline: 'consistent. rewarding. life-changing.',
+    title: 'Build streaks That show progression',
+    description:
+      'Fell rewarded for you progress.',
+    animation: streakAnimation,
+    textPosition: 'left',
+    accentColor: '#35bcd4',
+  },
 ];
 
 const FeatureRow = ({ feature, index }: { feature: Feature; index: number }) => {
