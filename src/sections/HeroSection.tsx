@@ -51,7 +51,7 @@ export const HeroSection = ({ onStart: _onStart }: { onStart: () => void }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Learn finance the{' '}
+            Financing the{' '}
             <span style={{ color: colors.green.DEFAULT }}>fun</span> way!
           </motion.h1>
 
