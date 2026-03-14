@@ -19,7 +19,8 @@ const features: Feature[] = [
     id: 'fun-learning',
     headline: 'free. fun. impactful.',
     title: 'Learning That Feels Like Play',
-    description: 'Learning with FinLearn is fun, and research shows that it works! With quick, bite-sized lessons, you\'ll earn points and unlock new levels while gaining real-world financial skills. Our gamified approach keeps you motivated with streaks, achievements, and daily challenges.',
+    description:
+      "Learning with FinLearn is fun, and research shows that it works! With quick, bite-sized lessons, you'll earn points and unlock new levels while gaining real-world financial skills.",
     animation: learningAnimation,
     textPosition: 'left',
     accentColor: '#58CC02',
@@ -28,7 +29,8 @@ const features: Feature[] = [
     id: 'real-world',
     headline: 'practical. relevant. powerful.',
     title: 'Real-World Financial Skills',
-    description: 'Make decisions in realistic scenarios and see the outcomes instantly. From budgeting your first paycheck to understanding credit cards and investing, you\'ll practice skills that directly apply to your life. No fluff—just practical knowledge that builds confidence.',
+    description:
+      'Make decisions in realistic scenarios and see the outcomes instantly. From budgeting your first paycheck to understanding credit cards and investing.',
     animation: moneyAnimation,
     textPosition: 'right',
     accentColor: '#1CB0F6',
@@ -37,7 +39,8 @@ const features: Feature[] = [
     id: 'build-habits',
     headline: 'consistent. rewarding. life-changing.',
     title: 'Build Habits That Stick',
-    description: 'Daily streaks and reminders keep you on track to financial freedom. Our habit-building system uses behavioral science to help you form lasting money management habits. Small daily actions lead to massive long-term results.',
+    description:
+      'Daily streaks and reminders keep you on track to financial freedom. Our habit-building system uses behavioral science to help you form lasting money management habits.',
     animation: streakAnimation,
     textPosition: 'left',
     accentColor: '#FF9600',
@@ -49,49 +52,51 @@ const FeatureRow = ({ feature, index }: { feature: Feature; index: number }) => 
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-100px' }}
-      transition={{ duration: 0.7, delay: index * 0.1 }}
-      className="py-16 md:py-24"
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.6, delay: index * 0.1, ease: 'easeOut' }}
+      className="py-12 sm:py-16 md:py-24"
     >
-      <div className="max-w-6xl mx-auto px-6">
-        <div
-          className={`grid md:grid-cols-2 gap-12 md:gap-16 items-center ${
-            isTextLeft ? '' : 'md:flex-row-reverse'
-          }`}
-        >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+
           {/* Text Content */}
+          {/* 
+            FIX: Use explicit order classes on ALL breakpoints.
+            On mobile: animation always renders first (order-1), text second (order-2).
+            On md+: swap based on textPosition.
+          */}
           <motion.div
-            className={`space-y-6 ${isTextLeft ? 'md:order-1' : 'md:order-2'}`}
-            initial={{ opacity: 0, x: isTextLeft ? -40 : 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            className={`
+              space-y-4 md:space-y-6
+              order-2
+              ${isTextLeft ? 'md:order-1' : 'md:order-2'}
+            `}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
           >
-            {/* Headline */}
             <h3
-              className="text-2xl md:text-3xl font-bold tracking-tight"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold tracking-tight uppercase"
               style={{ color: feature.accentColor }}
             >
               {feature.headline}
             </h3>
 
-            {/* Title */}
-            <h4 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+            <h4 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
               {feature.title}
             </h4>
 
-            {/* Description */}
-            <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
               {feature.description}
             </p>
 
-            {/* CTA Button */}
             <motion.button
               whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-3 rounded-xl font-bold text-white shadow-lg transition-all"
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-3.5 rounded-xl font-bold text-white shadow-lg transition-all"
               style={{
                 backgroundColor: feature.accentColor,
                 boxShadow: `0 4px 0 ${feature.accentColor}80, 0 8px 16px ${feature.accentColor}30`,
@@ -101,32 +106,47 @@ const FeatureRow = ({ feature, index }: { feature: Feature; index: number }) => 
             </motion.button>
           </motion.div>
 
-          {/* Animation */}
+          {/* Animation Container */}
+          {/* 
+            FIX: Animation renders first on mobile (order-1),
+            then swaps on md+ based on textPosition.
+          */}
           <motion.div
-            className={`relative ${isTextLeft ? 'md:order-2' : 'md:order-1'}`}
-            initial={{ opacity: 0, x: isTextLeft ? 40 : -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            className={`
+              order-1
+              ${isTextLeft ? 'md:order-2' : 'md:order-1'}
+            `}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
           >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
-              {/* Background Blob */}
+            {/* 
+              FIX: Removed max-w-sm constraint that was too restrictive on phones.
+              Use a percentage-based max-width that works across all screen sizes.
+            */}
+            <div className="relative w-full h-[260px] sm:h-[320px] md:h-[400px] lg:h-[450px] max-w-[360px] sm:max-w-md mx-auto">
+              {/* Background blob */}
               <div
-                className="absolute inset-0 rounded-full opacity-20 blur-3xl"
+                className="absolute inset-0 rounded-full opacity-20 blur-2xl"
                 style={{ backgroundColor: feature.accentColor }}
               />
-              
-              {/* Lottie Animation */}
-              <div className="relative z-10 w-full h-full p-8">
+
+              {/* Lottie */}
+              <div className="relative z-10 w-full h-full p-4 sm:p-6 md:p-8 flex items-center justify-center">
                 <Lottie
                   animationData={feature.animation}
                   loop={true}
                   autoplay={true}
-                  className="w-full h-full"
+                  style={{ width: '100%', height: '100%' }}
+                  rendererSettings={{
+                    preserveAspectRatio: 'xMidYMid meet',
+                  }}
                 />
               </div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </motion.div>
@@ -135,23 +155,24 @@ const FeatureRow = ({ feature, index }: { feature: Feature; index: number }) => 
 
 export const FeaturesSection = () => {
   return (
-    <section id="features" className="bg-white overflow-hidden">
+    <section id="features" className="bg-white relative overflow-x-hidden">
       {/* Section Header */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center pt-24 pb-8 px-6"
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.5 }}
+        className="text-center pt-16 sm:pt-20 md:pt-24 pb-8 px-4 sm:px-6"
       >
-        <span className="inline-block px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-sm font-bold mb-4">
+        <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-green-100 text-green-700 text-xs sm:text-sm font-bold mb-3 sm:mb-4">
           Why We're Different
         </span>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-3 sm:mb-4">
           Learning That Actually Works
         </h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          We combine behavioral science, gamification, and real-world scenarios 
-          to make financial literacy stick.
+        <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
+          We combine behavioral science, gamification, and real-world scenarios to make financial
+          literacy stick.
         </p>
       </motion.div>
 

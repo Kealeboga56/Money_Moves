@@ -32,10 +32,8 @@ const WelcomeScreen = ({ onStart }: { onStart: () => void }) => {
       </SectionTransition>
 
       {/* Features Section */}
-      <SectionTransition delay={0.1}>
-        <FeaturesSection />
-      </SectionTransition>
-
+      <FeaturesSection />
+     
       {/* How It Works */}
       <SectionTransition delay={0.1}>
         <HowItWorksSection />
@@ -87,6 +85,8 @@ function App() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
+
+
           <div className="text-center p-8">
             <OwlMascot emotion="happy" size="lg" />
             <h1 className="text-3xl font-bold text-gray-800 mt-6 mb-4">
@@ -103,6 +103,9 @@ function App() {
               Back to Home
             </button>
           </div>
+
+
+          
         </motion.div>
       )}
     </AnimatePresence>
