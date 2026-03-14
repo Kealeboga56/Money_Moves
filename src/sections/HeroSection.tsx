@@ -36,15 +36,15 @@ export const HeroSection = ({ onStart: _onStart }: { onStart: () => void }) => {
         {/* RIGHT — Content */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
 
-          {/* Owl visible only on mobile, centered */}
-          <motion.div
+          {/* Owl visible only on mobile, centered  *          <motion.div
             className="lg:hidden mb-8"
             initial={{ scale: 0, rotate: -20 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: 'spring', stiffness: 200, damping: 15 }}
           >
             <OwlMascot emotion="excited" size="lg" />
-          </motion.div>
+          </motion.div>* */}
+
 
           <motion.h1
             className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 max-w-2xl"
