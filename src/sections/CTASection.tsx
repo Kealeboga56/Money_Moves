@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 
 // CTA Section
-export const CTASection = ({ onStart }: { onStart: () => void }) => {
+export const CTASection = ({ onStart: _onStart }: { onStart: () => void }) => {
   return (
 <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
   <div className="max-w-4xl mx-auto">

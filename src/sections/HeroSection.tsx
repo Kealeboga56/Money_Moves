@@ -8,7 +8,7 @@ import { colors } from '@/styles/duolingo-theme';
 import Lottie from 'lottie-react';
 import flame_money from '../../src/lottie/money_flame.json';
 
-export const HeroSection = ({ onStart }: { onStart: () => void }) => {
+export const HeroSection = ({ onStart: _onStart }: { onStart: () => void }) => {
   return (
     <section
       id="home"

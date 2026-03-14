@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Play, ArrowRight, Sparkles, TrendingUp, Users, Star } from 'lucide-react';
+import { Sparkles, Users, Star } from 'lucide-react';
 
 const colors = {
   green: '#58CC02',
@@ -176,7 +176,7 @@ const AnimatedWord = ({ children, delay, gradient = false }: { children: string;
 );
 
 // Main Hero Section
-export const VideoSection = ({ onStart }: { onStart: () => void }) => {
+export const VideoSection = ({ onStart: _onStart }: { onStart: () => void }) => {
   return (
     <section 
       id="learn"
