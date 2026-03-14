@@ -51,9 +51,9 @@ const features: Feature[] = [
     headline: 'consistent. rewarding. life-changing.',
     title: 'Build streaks That show progression',
     description:
-      'Fell rewarded for you progress.',
+      'Feel rewarded for you progress.',
     animation: streakAnimation,
-    textPosition: 'left',
+    textPosition: 'right',
     accentColor: '#35bcd4',
   },
 ];
