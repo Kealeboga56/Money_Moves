@@ -75,7 +75,7 @@ export const HeroSection = ({ onStart }: { onStart: () => void }) => {
             whileHover={{ translateY: -2, boxShadow: `0 6px 0 #01082D, 0 12px 24px ${colors.green.DEFAULT}50` }}
             whileTap={{ translateY: 2, boxShadow: 'none' }}
           >
-            PLAY NOW
+            PLAY
             <ArrowRight size={20} className="inline ml-2" />
           </motion.button>
         </motion.div>

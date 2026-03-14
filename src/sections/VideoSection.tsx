@@ -216,7 +216,7 @@ export const VideoSection = ({ onStart }: { onStart: () => void }) => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <Sparkles size={16} className="animate-pulse" />
-            <span>Trusted by 50,000+ learners worldwide</span>
+            <span>Trusted by UCT students</span>
           </motion.div>
 
           {/* Main Title */}
@@ -225,7 +225,7 @@ export const VideoSection = ({ onStart }: { onStart: () => void }) => {
             <AnimatedWord delay={0.3}>Your</AnimatedWord>{' '}
             <AnimatedWord delay={0.4}>Money</AnimatedWord>
             <br />
-            <AnimatedWord delay={0.5} gradient>in 30 Days</AnimatedWord>
+            <AnimatedWord delay={0.5} gradient>in Days</AnimatedWord>
           </h1>
 
           {/* Subtitle */}
@@ -235,8 +235,8 @@ export const VideoSection = ({ onStart }: { onStart: () => void }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
           >
-            Transform your financial future with bite-sized lessons, 
-            real-world simulations, and AI-powered coaching that actually works.
+            Transform your financial future with bite-sized gamified lessons, 
+            real-world simulations.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -254,7 +254,7 @@ export const VideoSection = ({ onStart }: { onStart: () => void }) => {
               whileTap={{ scale: 0.98 }}
             >
               <Play size={22} fill="currentColor" />
-              Start Learning Free
+              Start Playing
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </motion.button>
             

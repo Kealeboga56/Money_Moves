@@ -3,6 +3,7 @@ import Lottie from 'lottie-react';
 import learningAnimation from '../../src/lottie/learning.json';
 import moneyAnimation from '../../src/lottie/money.json';
 import streakAnimation from '../../src/lottie/streak.json';
+import Man_flying from '../../src/lottie/Businessman_flies.json';
 
 interface Feature {
   id: string;
@@ -41,7 +42,7 @@ const features: Feature[] = [
     title: 'Build Habits That Stick',
     description:
       'Daily streaks and reminders keep you on track to financial freedom. Our habit-building system uses behavioral science to help you form lasting money management habits.',
-    animation: streakAnimation,
+    animation: Man_flying,
     textPosition: 'left',
     accentColor: '#FF9600',
   },

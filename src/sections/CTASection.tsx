@@ -13,8 +13,7 @@ export const CTASection = ({ onStart }: { onStart: () => void }) => {
             Ready to Start Your Journey?
           </h2>
           <p className="text-gray-400 text-xl mb-10 max-w-2xl mx-auto">
-            Join 50,000+ learners mastering their finances today. 
-            No credit card required. No hidden fees.
+            Join other people learning learning today. 
           </p>
           <motion.button
             onClick={() => onStart?.()}
@@ -22,7 +21,7 @@ export const CTASection = ({ onStart }: { onStart: () => void }) => {
             whileTap={{ scale: 0.95 }}
             className="px-12 py-5 rounded-2xl text-gray-900 font-bold text-xl bg-white hover:bg-gray-100 transition-colors shadow-xl"
           >
-            Get Started For Free
+            Get Started Now!
           </motion.button>
           <p className="text-gray-500 mt-6 text-sm">Available on iOS, Android, and Web</p>
         </motion.div>
