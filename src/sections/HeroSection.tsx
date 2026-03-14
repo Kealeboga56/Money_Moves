@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import OwlMascot from '@/components/ui/OwlMascot';
 import { colors } from '@/styles/duolingo-theme';
 
 
