@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Sparkles, Users, Star } from 'lucide-react';
+
+import { motion } from 'framer-motion';
+import { Sparkles } from 'lucide-react';
 
 const colors = {
   green: '#58CC02',
@@ -98,7 +98,7 @@ const FloatingShape = ({
 };
 
 // Animated counter component
-const AnimatedCounter = ({ 
+{/*const AnimatedCounter = ({ 
   end, 
   suffix = '', 
   label, 
@@ -157,7 +157,8 @@ const AnimatedCounter = ({
       <div className="text-sm text-gray-500 font-medium mt-1">{label}</div>
     </motion.div>
   );
-};
+}; */}
+
 
 // Word animation component
 const AnimatedWord = ({ children, delay, gradient = false }: { children: string; delay: number; gradient?: boolean }) => (
@@ -272,7 +273,9 @@ export const VideoSection = ({ onStart: _onStart }: { onStart: () => void }) => 
 
           
           {/* Stats Grid */}
-          <motion.div 
+
+          {/* Ratings
+                    <motion.div 
             className="grid grid-cols-3 gap-4 md:gap-8 max-w-lg mx-auto bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border border-gray-100"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -300,6 +303,9 @@ export const VideoSection = ({ onStart: _onStart }: { onStart: () => void }) => 
               color={colors.blue}
             />
           </motion.div>
+          
+          */}
+
         </div>
 
         {/* Scroll Indicator */}

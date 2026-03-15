@@ -13,7 +13,7 @@ export const CTASection = ({ onStart: _onStart }: { onStart: () => void }) => {
             Ready to Start Your Journey?
           </h2>
           <p className="text-gray-400 text-xl mb-10 max-w-2xl mx-auto">
-            Join other people learning learning today. 
+            Join other people learning today. 
           </p>
           <motion.button
            onClick={() => window.open("https://ai.studio/apps/6b9defed-4803-4eec-8b08-1e4178d67c08", "_blank")}

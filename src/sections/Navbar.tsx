@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'Features', href: '#features' },
+    { name: 'The Vision', href: '#features' },
     { name: 'Learn', href: '#learn' },
     { name: 'About', href: '#about' },
   ];
@@ -33,10 +33,12 @@ export const Navbar = () => {
           <div 
             className="w-10 h-10 rounded-xl flex items-center justify-center"
             style={{ backgroundColor: colors.background }}
+            onClick={() => scrollToSection('#home')}
           >
+            
             <OwlMascot emotion="happy" size="sm" />
           </div>
-          <span className="font-bold text-xl text-gray-800">FinLearn</span>
+      
         </div>
 
         {/* Desktop Navigation - Floating Pills */}

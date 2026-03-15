@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 export const TestimonialsSection = () => {
   const testimonials = [
     { name: 'Sarah K.', role: 'College Student', text: 'I finally understand credit cards thanks to this app! The scenarios feel so real.', avatar: '👩‍🎓' },
-    { name: 'Mike R.', role: 'Young Professional', text: 'Paid off $10k in debt using the strategies I learned here. Game changer!', avatar: '👨‍💼' },
+    { name: 'Mike R.', role: 'Young Professional', text: 'Paid off R10k in debt using the strategies I learned here. Game changer!', avatar: '👨‍💼' },
     { name: 'Lisa T.', role: 'Parent', text: 'Teaching my kids about money has never been easier. We learn together!', avatar: '👩‍👧' },
   ];
 
@@ -18,7 +18,7 @@ export const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="text-4xl font-bold text-center text-gray-800 mb-16"
         >
-          Loved by Learners
+          Loved by People
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-8">
