@@ -21,34 +21,68 @@ const WelcomeScreen = ({ onStart }: { onStart: () => void }) => {
       
       <Navbar />
       
-      {/* Hero Section - No delay, immediate presence */}
-      <SectionTransition>
-        <HeroSection onStart={onStart}/>
+      {/* Hero Section - No divider, highlight background */}
+      <SectionTransition 
+        variant="highlight" 
+        intensity="dramatic"
+        direction="up"
+      >
+        <HeroSection onStart={onStart} />
       </SectionTransition>
 
-      {/* Video Section */}
-      <SectionTransition delay={0.1}>
+      {/* Video Section - With wave divider, alternate background */}
+      <SectionTransition 
+        delay={0.1}
+        variant="alternate"
+        showDivider={true}
+        dividerStyle="wave"
+        direction="right"
+      >
         <VideoSection onStart={onStart} />
       </SectionTransition>
 
-      {/* Features Section */}
-      <FeaturesSection />
+      {/* Features Section - No transition wrapper needed if you want it different */}
+      <SectionTransition 
+        variant="default"
+        showDivider={true}
+        dividerStyle="slant"
+        direction="up"
+      >
+        <FeaturesSection />
+      </SectionTransition>
      
-      {/* How It Works */}
-      <SectionTransition delay={0.1}>
+      {/* How It Works - With curve divider */}
+      <SectionTransition 
+        delay={0.1}
+        variant="alternate"
+        showDivider={true}
+        dividerStyle="curve"
+        direction="left"
+      >
         <HowItWorksSection />
       </SectionTransition>
 
-      {/* Testimonials */}
-      <SectionTransition delay={0.1}>
+      {/* Testimonials - With dots divider */}
+      <SectionTransition 
+        delay={0.1}
+        variant="highlight"
+        showDivider={true}
+        dividerStyle="dots"
+        direction="diagonal"
+      >
         <TestimonialsSection />
       </SectionTransition>
 
-      {/* CTA Section */}
-      <SectionTransition delay={0.1}>
+      {/* CTA Section - Gradient background */}
+      <SectionTransition 
+        delay={0.1}
+        variant="gradient"
+        showDivider={true}
+        dividerStyle="wave"
+        intensity="dramatic"
+      >
         <CTASection onStart={onStart} />
       </SectionTransition>
-
 
       {/* Footer */}
       <Footer />

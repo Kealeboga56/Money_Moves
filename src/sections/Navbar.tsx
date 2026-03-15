@@ -36,7 +36,7 @@ export const Navbar = () => {
             onClick={() => scrollToSection('#home')}
           >
             
-            <OwlMascot emotion="happy" size="sm" />
+            <OwlMascot emotion="neutral" size="sm" animate={false} />
           </div>
       
         </div>
